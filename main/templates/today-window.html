@@ -1,0 +1,29 @@
+{% extends "base-template.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/today_styles.css') }}">
+    <title>Today</title>
+{% endblock %}
+
+{% block body %}
+    <div id="middle-content">
+        <div id="middle-heading">
+            <img id="list-icon" src="{{ url_for('static', filename='images/today_icon.svg') }}" alt="Today">
+            <span id="main-list-name">Today</span>
+        </div>
+
+        <div id="task-collection">
+            <div id="add-task-div">
+                <img class="menu-icons" src="{{ url_for('static', filename='images/add_icon.svg') }}" alt="Add List">
+                <span id="add-task-text">Add New Task</span>
+            </div>
+
+            <div class="task-div">
+                <form method="post">
+                    <input type="checkbox" class="task-complete" id="task-1" alt="Task Done" name="task_done">
+                    <label for="task-1" class="checkbox-label">Be quite successful</label>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

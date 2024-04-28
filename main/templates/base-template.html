@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu_styles.css') }}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <div id="main-content">
+        <div id="menu">
+            <span id="menu-title">Menu</span>
+            <hr class="content-breaker">
+
+            <span class="menu-titles">Tasks</span>
+
+            <div class="list-content">
+                <div class="task-list tasks">
+                    <img class="menu-icons" src="{{ url_for('static', filename='images/today_icon.svg') }}" alt="Today">
+                    <span class="list-name">Today</span>
+
+                    <div class="num-of-tasks"></div>
+                </div>
+
+                <div class="task-list tasks">
+                    <img class="menu-icons" src="{{ url_for('static', filename='images/important_icon.svg') }}" alt="Important">
+                    <span class="list-name">Important</span>
+
+                    <div class="num-of-tasks"></div>
+                </div>
+
+                <div class="task-list tasks">
+                    <img class="menu-icons" src="{{ url_for('static', filename='images/planned_icon.svg') }}" alt="Planned">
+                    <span class="list-name">Planned</span>
+
+                    <div class="num-of-tasks"></div>
+                </div>
+            </div>
+
+            <hr class="content-breaker">
+
+            <span class="menu-titles">Lists</span>
+
+            <div class="list-content lists">
+                <div id="add-list-div">
+                    <img class="menu-icons" src="{{ url_for('static', filename='images/add_icon.svg') }}" alt="Add List">
+                    <span class="list-name">Add New List</span>
+                </div>
+            </div>
+
+        </div>
+
+        {% block body %}{% endblock %}
+    </div>
+</body>
+
+</html>

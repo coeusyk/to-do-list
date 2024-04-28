@@ -1,0 +1,165 @@
+:root {
+    --background-color: #212121;
+    --theme-color: #88A3DD;
+    --main-div-color: #2b2b2b;
+}
+
+
+body {
+    background-color: var(--background-color);
+}
+
+
+#main-content {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 380px auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+
+#menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 35px 20px 155px 45px 15px auto;
+    grid-column: 1 / 1;
+    border: 0;
+    border-radius: 10px;
+    background-color: #2b2b2b;
+    height: 90%;
+    width: 300px;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+
+#menu-title {
+    position: relative;
+    font-family: Montserrat, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+    justify-self: left;
+    margin-left: 5px;
+}
+
+
+.content-breaker {
+    position: relative;
+    border: 0;
+    border-top: 2px solid #777777;
+    justify-self: center;
+    width: 340px;
+    left: -20px;
+}
+
+
+@font-face {
+    font-family: "Posterama 1927";
+    src: url("C:/Users/yashk/AppData/Local/Microsoft/Windows/Fonts/Posterama 1927 Light.otf") format("opentype");
+}
+
+
+.menu-titles {
+    position: relative;
+    font-family: "Posterama 1927", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: white;
+    justify-self:  left;
+    left: 9px;
+    top: 3px;
+}
+
+
+.list-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    width: 240px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 4px;
+    row-gap: 5px;
+    border: 0;
+    top: 5px;
+}
+
+
+.task-list {
+    display: grid;
+    grid-template-columns: 45px 185px auto;
+    width: 290px;
+    height: 45px;
+    cursor: pointer;
+    align-items: center;
+    justify-items: center;
+    border: 0;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.tasks:hover { background-color: var(--theme-color); }
+
+
+.menu-icons {
+    height: 18px;
+    width: 18px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.list-name {
+    font-family: Montserrat, serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    justify-self: left;
+}
+
+
+.num-of-tasks {
+    background-color: #212121;
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    border: 0;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+    visibility: hidden;
+}
+
+
+.lists {
+    margin-top: 10px;
+    align-self: start;
+}
+
+
+#add-list-div {
+    display: grid;
+    grid-template-columns: 45px auto;
+    cursor: pointer;
+    grid-row: -1 / -1;
+    transition: background-color 0.2s ease;
+    height: 50px;
+    width: 285px;
+    justify-items: center;
+    align-items: center;
+    align-self: start;
+    border-radius: 5px;
+}
+
+#add-list-div:hover {
+    background-color: #212121;
+}
